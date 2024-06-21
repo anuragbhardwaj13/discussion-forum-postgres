@@ -1,7 +1,4 @@
-package com.tasks.organizer.config;
-
-import com.tasks.organizer.entities.Role;
-import com.tasks.organizer.service.UserService;
+package com.anurag.application.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.anurag.application.entities.Role;
+import com.anurag.application.service.UserService;
+
 import lombok.RequiredArgsConstructor;
 
 @Configuration
@@ -32,12 +32,12 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests((request) ->
-                     request.requestMatchers(HttpMethod.OPTIONS).permitAll()
-                            .requestMatchers("/api/v1/auth/**").permitAll()
-                            .requestMatchers("/api/v1/resource/user").hasAuthority(Role.USER.name())
-                            .requestMatchers("/api/v1/**").hasAuthority(Role.ADMIN.name())
-                            .anyRequest().authenticated())
+                .authorizeHttpRequests((request) -> request.requestMatchers(HttpMethod.OPTIONS).permitAll()
+                        .requestMatchers("/health").permitAll()
+                        .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers("/api/v1/resource/user").hasAuthority(Role.USER.name())
+                        .requestMatchers("/api/v1/**").hasAuthority(Role.ADMIN.name())
+                        .anyRequest().authenticated())
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

@@ -1,12 +1,13 @@
-package com.tasks.organizer.service.impl;
+package com.anurag.application.service.impl;
 
-import com.tasks.organizer.repository.UserRepository;
-import com.tasks.organizer.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import com.anurag.application.repository.UserRepository;
+import com.anurag.application.service.UserService;
 
 @Service
 @RequiredArgsConstructor

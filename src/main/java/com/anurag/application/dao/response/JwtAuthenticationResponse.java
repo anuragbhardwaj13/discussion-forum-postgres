@@ -1,4 +1,4 @@
-package com.tasks.organizer.dao.response;
+package com.anurag.application.dao.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

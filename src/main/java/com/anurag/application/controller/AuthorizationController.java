@@ -1,4 +1,4 @@
-package com.tasks.organizer.controller;
+package com.anurag.application.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

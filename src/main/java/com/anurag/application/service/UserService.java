@@ -1,4 +1,4 @@
-package com.tasks.organizer.service;
+package com.anurag.application.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 

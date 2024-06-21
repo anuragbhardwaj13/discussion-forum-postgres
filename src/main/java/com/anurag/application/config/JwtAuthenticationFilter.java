@@ -1,9 +1,7 @@
-package com.tasks.organizer.config;
+package com.anurag.application.config;
 
 import java.io.IOException;
 
-import com.tasks.organizer.service.JwtService;
-import com.tasks.organizer.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,6 +17,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.anurag.application.service.JwtService;
+import com.anurag.application.service.UserService;
 
 @Component
 @RequiredArgsConstructor

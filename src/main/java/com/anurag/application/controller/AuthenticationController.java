@@ -1,15 +1,16 @@
-package com.tasks.organizer.controller;
+package com.anurag.application.controller;
 
-import com.tasks.organizer.dao.request.SignUpRequest;
-import com.tasks.organizer.dao.request.SigninRequest;
-import com.tasks.organizer.dao.response.JwtAuthenticationResponse;
-import com.tasks.organizer.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.anurag.application.dao.request.SignUpRequest;
+import com.anurag.application.dao.request.SigninRequest;
+import com.anurag.application.dao.response.JwtAuthenticationResponse;
+import com.anurag.application.service.AuthenticationService;
 
 @RestController
 @RequestMapping("/api/v1/auth")

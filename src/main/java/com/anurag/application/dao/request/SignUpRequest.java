@@ -1,4 +1,4 @@
-package com.tasks.organizer.dao.request;
+package com.anurag.application.dao.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,5 +13,7 @@ public class SignUpRequest {
     private String firstName;
     private String lastName;
     private String email;
-                private String password;
+    private String username;
+    private String mobile;
+    private String password;
 }
